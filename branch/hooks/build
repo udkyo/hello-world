@@ -3,8 +3,10 @@
 export DOCKER_CLI_EXPERIMENTAL=enabled
 export DOCKER_BUILDKIT=1
 
+cd branch
+
 docker buildx build . \
-    -f $DOCKERFILE_PATH \
+    -f Dockerfile \
     -t $IMAGE_NAME \
     --platform linux/amd64,linux/arm64 \
     --progress plain \
