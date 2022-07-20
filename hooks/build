@@ -5,6 +5,6 @@ export DOCKER_BUILDKIT=1
 
 docker buildx build . \
     --platform linux/amd64,linux/arm64 \
-    --progress plain --load \
+    --progress plain \
     -f $DOCKERFILE_PATH \
     -t $IMAGE_NAME
